@@ -269,6 +269,7 @@ export default function PrintDocument() {
             <p style={{ fontSize: '8.4pt', fontWeight: 700, color: MUTED, marginTop: 2, lineHeight: 1.4 }}>{t('work.1.sub')}</p>
             <Bullets text={t('work.1.desc')} size="9.2pt" color="#2b2620" />
             <p style={{ fontSize: '8.4pt', fontWeight: 800, color: BROWN, marginTop: 6 }}>{parts(t('work.1.tags')).join('  ·  ')}</p>
+            <Links id="work.1" color={BROWN} />
           </div>
           <div style={{ alignSelf: 'center' }}>
             <Photo src="/galeri/work-1-1.jpg" w="147mm" h="82.7mm" style={{ borderRadius: '5mm' }} />

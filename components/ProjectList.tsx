@@ -9,7 +9,7 @@ const projects = [
     description: { id: "Analisis kebutuhan, blueprint sistem, dan FSD sebagai PIC sisi Kementerian.", en: "Requirements analysis, system blueprint, and FSD as the Ministry-side PIC." },
     framework: "KEMENTERIAN TRANSMIGRASI 2025 — 2026",
     techStack: ["Business Analysis", "FSD"],
-    url: "",
+    url: "https://www.figma.com/proto/mMTaZEgtfEQva5G8cGe22h/Si-ECO?page-id=110%3A131&node-id=124-640&viewport=-540%2C409%2C0.23&t=lE3PSGHhoMLgT3OP-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=124%3A640&show-proto-sidebar=1",
   },
   {
     number: "02",

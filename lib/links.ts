@@ -4,6 +4,11 @@ export type Link = { id: string; en: string; url: string }
 const l = (id: string, url: string, en = id): Link => ({ id, en, url })
 
 export const links: Record<string, Link[]> = {
+  'work.1': [
+    l('Prototipe Portal & CMS Pelaku Usaha', 'https://www.figma.com/proto/mMTaZEgtfEQva5G8cGe22h/Si-ECO?page-id=110%3A131&node-id=124-640&viewport=-540%2C409%2C0.23&t=lE3PSGHhoMLgT3OP-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=124%3A640&show-proto-sidebar=1', 'Business Portal & CMS Prototype'),
+    l('Prototipe Portal Mobile', 'https://www.figma.com/proto/mMTaZEgtfEQva5G8cGe22h/Si-ECO?page-id=110%3A131&node-id=651-7834&viewport=-540%2C409%2C0.23&t=7ubvpEMSKY549sDz-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=647%3A7950&show-proto-sidebar=1', 'Mobile Portal Prototype'),
+    l('Prototipe CMS Stakeholder', 'https://www.figma.com/proto/mMTaZEgtfEQva5G8cGe22h/Si-ECO?page-id=110%3A131&node-id=1059-11573&viewport=-540%2C409%2C0.23&t=7ubvpEMSKY549sDz-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=1059%3A11573&show-proto-sidebar=1', 'Stakeholder CMS Prototype'),
+  ],
   'proj.1': [
     l('Situs FittlyAR', 'https://fittlyar.com/', 'FittlyAR Website'),
     l('Desain Figma', 'https://www.figma.com/design/OKRiN1B3UnyYYlA6ncefNp/Untitled?node-id=106-750', 'Figma Design'),

@@ -34,3 +34,7 @@ Dokumen laporan FittlyAR, tugas kuliah (.docx/.zip/.ppt), dan blueprint Si-ECO t
 - Foto di bagian Pendidikan diganti logo BINUS University (dirender dari sertifikat Beelingua milik klien).
 - Ditambah GitHub https://github.com/jeanette0509 di Kontak, PDF, dan halaman semua proyek.
 - Karya Figma tetap ditampilkan sebagai tautan. Tautan Figma Si-ECO tidak dipasang (pilihan "deskripsi saja").
+
+## Revisi klien (27 Nov 2026)
+- Klien meminta tautan untuk bagian magang: tiga prototipe Figma Si-ECO dari dokumen "Link Figma SI ECO MARKET ACCESS" dipasang
+  di situs, daftar portofolio, dan PDF. Keputusan lama "deskripsi saja" berubah hanya untuk tautan; blueprint dan diagram tetap tidak dipublikasikan.
