@@ -83,11 +83,11 @@ export default function Navbar() {
           <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-[var(--foreground)] flex items-center justify-center transition-transform group-hover:scale-105">
             <span className="text-[var(--background)] font-serif text-sm italic font-bold">A</span>
           </div>
-          <span className="font-semibold text-xs sm:text-sm tracking-wider hidden sm:block">ANANDYA</span>
+          <span className="font-semibold text-xs sm:text-sm tracking-wider hidden sm:block xl:hidden min-[1400px]:block">ANANDYA</span>
         </a>
 
         {/* Desktop Links */}
-        <div className="hidden xl:flex items-center justify-center flex-1 min-w-0 gap-1.5 xl:gap-2.5 2xl:gap-3 px-2">
+        <div className="hidden xl:flex items-center justify-center flex-1 min-w-0 gap-1.5 xl:gap-0.5 min-[1400px]:gap-2 2xl:gap-3 px-2">
           {currentLinks.map((link) => (
             <a
               key={link.label}
@@ -99,7 +99,7 @@ export default function Navbar() {
                   handleNavClick(e, link.href)
                 }
               }}
-              className={`nav-link whitespace-nowrap text-[10.5px] xl:text-[11.5px] tracking-wider font-semibold px-2 py-1 rounded-full transition-all hover:text-[var(--foreground)] ${
+              className={`nav-link whitespace-nowrap text-[10.5px] min-[1400px]:text-[11.5px] tracking-wider font-semibold px-1.5 min-[1400px]:px-2 py-1 rounded-full transition-all hover:text-[var(--foreground)] ${
                 isProjectSection && link.id === activeProjectTab
                   ? 'text-[var(--foreground)] bg-[var(--foreground)]/10'
                   : 'text-[var(--muted)] hover:bg-[var(--foreground)]/5'
@@ -138,7 +138,7 @@ export default function Navbar() {
           <a
             href="/#contact"
             onClick={(e) => handleNavClick(e, '/#contact')}
-            className="whitespace-nowrap px-3.5 sm:px-4 py-1.5 sm:py-2 text-[11px] sm:text-xs font-semibold tracking-wider rounded-full bg-[var(--foreground)] text-[var(--background)] hover:opacity-90 transition-opacity shadow-sm"
+            className="max-[379px]:hidden whitespace-nowrap px-3.5 sm:px-4 py-1.5 sm:py-2 text-[11px] sm:text-xs font-semibold tracking-wider rounded-full bg-[var(--foreground)] text-[var(--background)] hover:opacity-90 transition-opacity shadow-sm"
           >
             {t('nav.contact')}
           </a>
@@ -177,6 +177,13 @@ export default function Navbar() {
                 {link.label}
               </a>
             ))}
+            <a
+              href="/#contact"
+              onClick={(e) => handleNavClick(e, '/#contact')}
+              className="min-[380px]:hidden block px-3 py-2 rounded-xl text-xs tracking-wider font-semibold text-[var(--muted)] hover:text-[var(--foreground)] hover:bg-[var(--foreground)]/5 transition-colors"
+            >
+              {t('nav.contact')}
+            </a>
             <div className="pt-2 border-t border-[var(--card-border)] flex items-center gap-3 px-3 py-2">
               <span className="text-[10px] text-[var(--muted)] font-semibold tracking-widest uppercase">Bahasa / Language:</span>
               <button

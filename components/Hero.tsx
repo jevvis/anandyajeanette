@@ -42,7 +42,7 @@ export default function Hero() {
     <section className="relative h-[100svh] md:h-screen w-full overflow-hidden flex items-center justify-center">
       {/* Kata besar di belakang foto (diam): huruf solid tebal yang memudar ke bawah */}
       <div className="absolute inset-x-0 top-[11svh] md:top-[13vh] flex justify-center overflow-hidden pointer-events-none" aria-hidden="true">
-        <span className="inline-flex font-oswald text-[clamp(90px,19.5vw,340px)] font-bold uppercase leading-[0.9] tracking-tight select-none">
+        <span className="inline-flex font-oswald text-[clamp(56px,19.5vw,340px)] font-bold uppercase leading-[0.9] tracking-tight select-none">
           {'PORTOFOLIO'.split('').map((ch, i) => (
             <span key={i} className="hero-name hero-anim hero-letter" style={{ '--d': `${i * 75}ms` } as React.CSSProperties}>
               {ch}
@@ -52,26 +52,27 @@ export default function Hero() {
       </div>
 
       {/* Sapaan + nama + tagline (kiri) */}
-      <div className="hero-anim absolute left-[4vw] lg:left-[6vw] top-[47%] 2xl:left-auto 2xl:right-1/2 2xl:mr-[360px] 2xl:top-[50%] 2xl:w-[300px] z-20 hidden md:block max-w-[250px] lg:max-w-[300px] pointer-events-none" style={{ '--d': '1000ms' } as React.CSSProperties}>
+      <div className="hero-side hero-anim absolute left-[4vw] lg:left-[6vw] top-[47%] 2xl:left-auto 2xl:right-1/2 2xl:mr-[360px] 2xl:top-[50%] 2xl:w-[300px] z-20 hidden md:block max-w-[250px] lg:max-w-[300px] pointer-events-none" style={{ '--d': '1000ms' } as React.CSSProperties}>
         <p className="font-script text-3xl lg:text-4xl font-bold text-emerald-600 dark:text-emerald-400 -rotate-3 leading-none mb-1">{t('hero.hey')}</p>
         <h1 className="text-2xl lg:text-4xl font-bold tracking-tight text-[var(--foreground)] leading-[1.05]">Anandya Jeanette<span className="block text-lg lg:text-2xl font-semibold text-emerald-600 dark:text-emerald-400 mt-1">Bintang Maharani</span></h1>
         <p className="mt-3 text-xs lg:text-[13px] leading-relaxed text-[var(--muted)]">{t('hero.tagline')}</p>
       </div>
 
       {/* Versi HP: sapaan + nama di antara kata besar dan kepala foto */}
-      <div className="hero-anim absolute inset-x-0 top-[calc(11svh+8.5rem)] z-20 md:hidden text-center pointer-events-none px-4" style={{ '--d': '1000ms' } as React.CSSProperties}>
-        <p className="font-script text-2xl font-bold text-emerald-600 dark:text-emerald-400 leading-none">{t('hero.hey')}</p>
-        <h1 className="text-2xl font-bold tracking-tight text-[var(--foreground)]">Anandya Jeanette Bintang Maharani</h1>
+      <div className="hero-stack hero-anim absolute inset-x-0 top-[calc(11svh+19vw+4px)] z-20 md:hidden text-center pointer-events-none px-4" style={{ '--d': '1000ms' } as React.CSSProperties}>
+        <p className="hero-stack-hey font-script text-2xl font-bold text-emerald-600 dark:text-emerald-400 leading-none">{t('hero.hey')}</p>
+        <h1 className="text-xl min-[380px]:text-2xl font-bold tracking-tight text-[var(--foreground)]">Anandya Jeanette Bintang Maharani</h1>
+        <p className="hero-stack-role hidden mt-1 text-base font-semibold text-[var(--muted)]">{t('hero.role1')}</p>
       </div>
 
       {/* Keterangan kecil kiri-bawah */}
-      <div className="hero-anim absolute left-[4vw] lg:left-[6vw] bottom-8 2xl:left-auto 2xl:right-1/2 2xl:mr-[360px] 2xl:w-[300px] z-20 hidden md:block pointer-events-none text-[9px] lg:text-[10px] tracking-[0.2em] font-semibold uppercase text-[var(--muted)] leading-relaxed" style={{ '--d': '1200ms' } as React.CSSProperties}>
+      <div className="hero-foot hero-anim absolute left-[4vw] lg:left-[6vw] bottom-8 2xl:left-auto 2xl:right-1/2 2xl:mr-[360px] 2xl:w-[300px] z-20 hidden md:block pointer-events-none text-[9px] lg:text-[10px] tracking-[0.2em] font-semibold uppercase text-[var(--muted)] leading-relaxed" style={{ '--d': '1200ms' } as React.CSSProperties}>
         <p>{t('hero.based1')}</p>
         <p>{t('hero.based2')}</p>
       </div>
 
       {/* Kartu peran + tombol (kanan-bawah) */}
-      <div className="absolute right-[3vw] lg:right-[5vw] bottom-8 xl:right-0 xl:left-[calc(50%+0.463*min(82vh,651px))] xl:-translate-x-6 z-20 hidden md:flex flex-col items-center">
+      <div className="hero-card absolute right-[3vw] lg:right-[5vw] bottom-8 xl:right-0 xl:left-[calc(50%+0.463*min(82vh,651px))] xl:-translate-x-6 z-20 hidden md:flex flex-col items-center">
         {/* kartu putih (tetap putih di mode terang maupun gelap; warna teks dibuat tetap agar terbaca). Di xl+: kolom dari lengan kanan foto (setengah lebar jas = 0,463 x tinggi foto yang tampil, tinggi dibatasi min(82vh, 651px)) sampai tepi kanan layar; kartu di tengahnya */}
         <div className="hero-anim w-[250px] lg:w-[270px] rounded-3xl border border-zinc-200 bg-white px-5 py-4 text-center shadow-[0_14px_34px_-14px_rgba(0,0,0,0.35)] pointer-events-none" style={{ '--d': '1350ms' } as React.CSSProperties}>
           <p className="text-base lg:text-lg font-bold leading-snug text-[#8a6a3a]">{t('hero.role1')}</p>
@@ -160,7 +161,7 @@ export default function Hero() {
             <img
               src="/profile.png"
               alt="Anandya Jeanette Bintang Maharani"
-              className={`w-full h-auto max-h-[62svh] md:max-h-[82vh] object-contain transition-all duration-500 ${
+              className={`hero-img w-full h-auto max-h-[62svh] md:max-h-[82vh] object-contain transition-all duration-500 ${
                 isHovered ? 'brightness-105 contrast-105' : 'brightness-100'
               }`}
               style={{

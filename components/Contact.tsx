@@ -84,7 +84,7 @@ export default function Contact() {
             <div className="flex flex-wrap items-center gap-4">
               <a
                 href="mailto:bmaharani2004@gmail.com"
-                className="inline-flex items-center gap-2 px-6 py-4 rounded-full border border-[var(--card-border)] bg-[var(--card-bg)] text-sm font-semibold hover:border-[var(--muted)] hover:bg-[var(--foreground)]/5 transition-all"
+                className="inline-flex max-w-full items-center gap-2 px-5 sm:px-6 py-4 rounded-full [overflow-wrap:anywhere] border border-[var(--card-border)] bg-[var(--card-bg)] text-sm font-semibold hover:border-[var(--muted)] hover:bg-[var(--foreground)]/5 transition-all"
               >
                 bmaharani2004@gmail.com
               </a>
@@ -95,15 +95,15 @@ export default function Contact() {
           <div className="space-y-4">
             {contactChannels.map((item) => {
               const CardContent = (
-                <div className="relative p-5 sm:p-6 rounded-2xl bg-[var(--card-bg)] border border-[var(--card-border)] flex items-center gap-4 sm:gap-5 hover:border-emerald-500/40 hover:shadow-lg hover:scale-[1.01] transition-all duration-200 group">
-                  <div className="w-12 h-12 rounded-xl bg-[var(--background)] border border-[var(--card-border)] flex items-center justify-center shrink-0 text-[var(--foreground)] group-hover:text-emerald-500 group-hover:border-emerald-500/30 transition-colors shadow-sm">
+                <div className="relative p-4 sm:p-6 rounded-2xl bg-[var(--card-bg)] border border-[var(--card-border)] flex items-center gap-3 sm:gap-5 hover:border-emerald-500/40 hover:shadow-lg hover:scale-[1.01] transition-all duration-200 group">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-[var(--background)] border border-[var(--card-border)] flex items-center justify-center shrink-0 text-[var(--foreground)] group-hover:text-emerald-500 group-hover:border-emerald-500/30 transition-colors shadow-sm">
                     {item.icon}
                   </div>
-                  <div className="flex-1 min-w-0 pr-8">
+                  <div className="flex-1 min-w-0 pr-3 sm:pr-8">
                     <p className="text-[10px] tracking-[0.2em] uppercase text-[var(--muted)] mb-1 font-semibold">
                       {item.label}
                     </p>
-                    <p className="text-sm sm:text-base font-bold text-[var(--foreground)] truncate group-hover:text-emerald-500 transition-colors">
+                    <p className="text-[13px] sm:text-base font-bold text-[var(--foreground)] leading-snug [overflow-wrap:anywhere] group-hover:text-emerald-500 transition-colors">
                       {item.value}
                     </p>
                   </div>
